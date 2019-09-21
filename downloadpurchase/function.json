@@ -1,0 +1,29 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "name": "pumpkinstore",
+      "type": "cosmosDB",
+      "direction": "in",
+      "leaseCollectionName" : "leases",
+      "connectionStringSetting": "pumpkinpatchcosmos",
+      "databaseName": "pumpkin-orders",
+      "collectionName": "purchaseorder",
+      "createIfNotExists": true
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    }
+  ]
+}
