@@ -18,7 +18,14 @@
       "connectionStringSetting": "pumpkinpatchcosmos",
       "databaseName": "pumpkin-orders",
       "collectionName": "purchaseorder",
-      "createIfNotExists": true
+      "sqlQuery" : "SELECT * FROM c WHERE c.type='pumpkin order'"
+    },
+    {
+      "name": "outputblob",
+      "type": "blob",
+      "path": "orders/{name}",
+      "connection": "pumpkinpatchblobs",
+      "direction": "out"
     },
     {
       "type": "http",
