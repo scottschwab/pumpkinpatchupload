@@ -21,13 +21,6 @@
       "sqlQuery" : "SELECT * FROM c WHERE c.type='pumpkin order'"
     },
     {
-      "name": "outputblob",
-      "type": "blob",
-      "path": "orders/{name}",
-      "connection": "pumpkinpatchblobs",
-      "direction": "out"
-    },
-    {
       "type": "http",
       "direction": "out",
       "name": "$return"

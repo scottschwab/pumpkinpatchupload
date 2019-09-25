@@ -31,7 +31,7 @@ def main(req: func.HttpRequest, pumpkinstore: func.Out[func.Document]) -> func.H
         eOut = dict()
         eOut["error"] = "missing values"
         eOut["missing"] = missing
-        logger.warning("Missing " + missing)
+        logger.warning("Missing " + json.dumps(eOut))
         return func.HttpResponse(body=json.dumps(eOut), status_code=400)
 
     # generate a unique id, so we can remove the entry if needed
